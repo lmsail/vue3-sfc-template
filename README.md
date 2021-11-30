@@ -1,2 +1,2 @@
 # vue3-sfc-template
-vue3+vite+vuex+naiveui脚手架
+ vue3+vite+vuex+naiveui脚手架

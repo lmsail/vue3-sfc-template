@@ -1,0 +1,47 @@
+@import url('./reset.css');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#app {
+    height: 100vh;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.view-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #fff;
+    padding: 15px;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* 仿 app 跳转动画 */
+.turn-off-leave-to {
+    transform: translate3d(100%, 0, 0);
+}
+.turn-off-enter-active, .turn-off-leave-active {
+    transition: transform 0.3s ease;
+}
+.turn-off-leave-active {
+    z-index: 2;
+}
+
+.turn-on-enter-active, .turn-on-leave-active {
+    animation-duration: 0.3s;
+}
+.turn-on-enter-active {
+    animation-name: turn-on-in;
+}
+@keyframes turn-on-in {
+    from { transform: translate3d(100%, 0, 0); }
+    to { transform: translate3d(0, 0, 0); }
+}
